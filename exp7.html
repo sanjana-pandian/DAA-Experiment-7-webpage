@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>N-Queens Problem</title>
+
+<style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#4facfe,#00f2fe);
+    padding:40px;
+}
+
+.container{
+    width:90%;
+    max-width:1100px;
+    margin:auto;
+    background:white;
+    border-radius:15px;
+    padding:30px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.25);
+}
+
+h1{
+    text-align:center;
+    color:#1565C0;
+    margin-bottom:25px;
+}
+
+.card{
+    background:#E3F2FD;
+    border-left:6px solid #1565C0;
+    padding:18px;
+    border-radius:8px;
+    margin-bottom:25px;
+}
+
+.card h2{
+    color:#0D47A1;
+    margin-bottom:10px;
+}
+
+.card p{
+    line-height:1.6;
+    font-size:17px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+}
+
+th{
+    background:#1976D2;
+    color:white;
+    padding:12px;
+}
+
+td{
+    text-align:center;
+    padding:12px;
+    border:1px solid #ddd;
+}
+
+tr:nth-child(even){
+    background:#f5f5f5;
+}
+
+.board{
+    margin:20px auto;
+    border-collapse:collapse;
+}
+
+.board td{
+    width:50px;
+    height:50px;
+    text-align:center;
+    font-size:26px;
+    font-weight:bold;
+}
+
+.white{
+    background:#ffffff;
+}
+
+.black{
+    background:#999;
+}
+
+.footer{
+    text-align:center;
+    margin-top:30px;
+    color:#555;
+    font-weight:bold;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>N-Queens Problem using Backtracking</h1>
+
+<div class="card">
+
+<h2>Problem Statement</h2>
+
+<p>
+
+Place <b>N Queens</b> on an <b>N × N Chessboard</b> such that no two queens attack each other.
+No two queens should be in the same row, column, or diagonal.
+The solution is obtained using the <b>Backtracking</b> algorithm.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>Results</h2>
+
+<table>
+
+<tr>
+<th>Board Size (N)</th>
+<th>Solutions</th>
+<th>Backtracks</th>
+</tr>
+
+<tr>
+<td>4</td>
+<td>2</td>
+<td>16</td>
+</tr>
+
+<tr>
+<td>6</td>
+<td>4</td>
+<td>152</td>
+</tr>
+
+<tr>
+<td>8</td>
+<td>92</td>
+<td>2056</td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="card">
+
+<h2>4-Queens Solution 1</h2>
+
+<table class="board">
+
+<tr>
+<td class="white">.</td>
+<td class="black">Q</td>
+<td class="white">.</td>
+<td class="black">.</td>
+</tr>
+
+<tr>
+<td class="black">.</td>
+<td class="white">.</td>
+<td class="black">.</td>
+<td class="white">Q</td>
+</tr>
+
+<tr>
+<td class="white">Q</td>
+<td class="black">.</td>
+<td class="white">.</td>
+<td class="black">.</td>
+</tr>
+
+<tr>
+<td class="black">.</td>
+<td class="white">.</td>
+<td class="black">Q</td>
+<td class="white">.</td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="card">
+
+<h2>4-Queens Solution 2</h2>
+
+<table class="board">
+
+<tr>
+<td class="white">.</td>
+<td class="black">.</td>
+<td class="white">Q</td>
+<td class="black">.</td>
+</tr>
+
+<tr>
+<td class="black">Q</td>
+<td class="white">.</td>
+<td class="black">.</td>
+<td class="white">.</td>
+</tr>
+
+<tr>
+<td class="white">.</td>
+<td class="black">.</td>
+<td class="white">.</td>
+<td class="black">Q</td>
+</tr>
+
+<tr>
+<td class="black">.</td>
+<td class="white">Q</td>
+<td class="black">.</td>
+<td class="white">.</td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="card">
+
+<h2>Algorithm Complexity</h2>
+
+<table>
+
+<tr>
+<th>Property</th>
+<th>Value</th>
+</tr>
+
+<tr>
+<td>Technique</td>
+<td>Backtracking</td>
+</tr>
+
+<tr>
+<td>Time Complexity</td>
+<td>O(N!)</td>
+</tr>
+
+<tr>
+<td>Space Complexity</td>
+<td>O(N)</td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="footer">
+
+
+
+</div>
+
+</div>
+
+</body>
+</html>
